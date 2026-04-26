@@ -1,0 +1,36 @@
+# Log file to monitor
+log_file: /var/log/nginx/hng-access.log
+
+# Audit log
+audit_log: /var/log/detector/audit.log
+
+# Sliding window duration in seconds
+sliding_window_seconds: 60
+
+# Baseline rolling window in minutes
+baseline_window_minutes: 30
+
+# Baseline recalculation interval in seconds
+baseline_recalc_interval: 60
+
+# Anomaly detection thresholds
+zscore_threshold: 3.0
+rate_multiplier_threshold: 5.0
+
+# Error surge threshold
+error_surge_multiplier: 3.0
+
+# Ban backoff schedule in minutes
+ban_schedule:
+  - 10
+  - 30
+  - 120
+  - permanent
+
+# Dashboard
+dashboard_port: 8080
+dashboard_refresh_seconds: 3
+
+# Baseline floor values (minimum to avoid false positives on low traffic)
+baseline_floor_mean: 1.0
+baseline_floor_stddev: 0.5
