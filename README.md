@@ -1,4 +1,4 @@
-# HNG Anomaly Detection Engine
+# Anomaly Detection Engine
 
 A real-time DDoS/anomaly detection daemon built in Python that monitors HTTP traffic, learns normal behaviour, and automatically blocks malicious IPs using iptables.
 
